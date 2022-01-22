@@ -50,9 +50,7 @@ AfterAll(async () => {
 // Create a fresh browser context for each test.
 Before(async (scenario) => {
     global.context = await global.browser.newContext({
-        recordVideo: {
-            dir: 'videos/' + scenario.pickle.name,
-        }
+
     });
     global.page = await global.context.newPage();
 });
