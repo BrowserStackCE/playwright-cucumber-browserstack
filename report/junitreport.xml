@@ -1,0 +1,14 @@
+<testsuites>
+    <testsuite name="google&apos;s-search-functionality;can-find-search-results" tests="5" failures="0" errors="0" skipped="0" timestamp="Sat, 22 Jan 2022 08:25:07 GMT" time="3.705">
+        <testcase name="Beforeundefined" classname="google&apos;s-search-functionality;can-find-search-results" time="0.918">
+        </testcase>
+        <testcase name="When I type query as BrowserStack" classname="google&apos;s-search-functionality;can-find-search-results" time="2.427">
+        </testcase>
+        <testcase name="Then I submit" classname="google&apos;s-search-functionality;can-find-search-results" time="0.237">
+        </testcase>
+        <testcase name="Then I should see title BrowserStack" classname="google&apos;s-search-functionality;can-find-search-results" time="0.113">
+        </testcase>
+        <testcase name="Afterundefined" classname="google&apos;s-search-functionality;can-find-search-results" time="0.01">
+        </testcase>
+    </testsuite>
+</testsuites>

@@ -7,15 +7,17 @@ var path = require('path');
 let moonHost = '';
 
 //BSTACK
-let bStack = true;
+let bStack = false;
+let parallel = false;
 const options = {
     // executablePath: '',
     headless: false,
-    slowMo: 200
+    slowMo: 100
 };
 
 const cp = require('child_process');
 const clientPlaywrightVersion = cp.execSync('npx playwright --version').toString().trim().split(' ')[1];
+
 const caps = {
     'browser': 'chrome',  // allowed browsers are `chrome`, `edge`, `playwright-chromium`, `playwright-firefox` and `playwright-webkit`
     'os': 'osx',
@@ -28,17 +30,8 @@ const caps = {
 };
 
 
-
 // Create a global browser for the test session.
 BeforeAll(async () => {
-    if (moonHost) {
-        console.log(moonHost)
-        global.browser = await chromium.connect({
-            timeout: 0,
-            wsEndpoint: 'ws://' + moonHost + ':4444/playwright/chromium',
-            headless: false
-        });
-    }
     if (bStack) {
         global.browser = await chromium.connect({
             wsEndpoint: `wss://cdp.browserstack.com/playwright?caps=${encodeURIComponent(JSON.stringify(caps))}`,
