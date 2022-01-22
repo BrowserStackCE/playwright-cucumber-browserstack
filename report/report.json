@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 788000000
+              "duration": 700000000
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2639000000
+              "duration": 1088000000
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 5005000000,
+              "duration": 5012000000,
               "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout._onTimeout (/Users/mohammed/playwright-ghosh/Playwright-Cucumber/node_modules/@cucumber/cucumber/lib/user_code_runner.js:63:28)\n    at listOnTimeout (internal/timers.js:554:17)\n    at processTimers (internal/timers.js:497:7)"
             }
           },
@@ -62,7 +62,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 66000000
+              "duration": 58000000
             }
           }
         ],
@@ -81,7 +81,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 860000000
+              "duration": 661000000
             }
           },
           {
@@ -94,7 +94,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2546000000
+              "duration": 1094000000
             }
           },
           {
@@ -107,7 +107,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 5007000000,
+              "duration": 5009000000,
               "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout._onTimeout (/Users/mohammed/playwright-ghosh/Playwright-Cucumber/node_modules/@cucumber/cucumber/lib/user_code_runner.js:63:28)\n    at listOnTimeout (internal/timers.js:554:17)\n    at processTimers (internal/timers.js:497:7)"
             }
           },
@@ -129,7 +129,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 90000000
+              "duration": 71000000
             }
           }
         ],
@@ -159,7 +159,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 428000000
+              "duration": 804000000
             }
           },
           {
@@ -172,7 +172,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1103000000
+              "duration": 1163000000
             }
           },
           {
@@ -185,7 +185,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 7000000
+              "duration": 5000000
             }
           },
           {
@@ -198,7 +198,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 5004000000,
+              "duration": 5014000000,
               "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout._onTimeout (/Users/mohammed/playwright-ghosh/Playwright-Cucumber/node_modules/@cucumber/cucumber/lib/user_code_runner.js:63:28)\n    at listOnTimeout (internal/timers.js:554:17)\n    at processTimers (internal/timers.js:497:7)"
             }
           },
@@ -259,7 +259,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 70000000
+              "duration": 100000000
             }
           }
         ],
@@ -289,7 +289,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 363000000
+              "duration": 391000000
             }
           },
           {
@@ -302,7 +302,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1186000000
+              "duration": 1150000000
             }
           },
           {
@@ -315,7 +315,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3000000
+              "duration": 4000000
             }
           },
           {
@@ -328,7 +328,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 5007000000,
+              "duration": 5008000000,
               "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout._onTimeout (/Users/mohammed/playwright-ghosh/Playwright-Cucumber/node_modules/@cucumber/cucumber/lib/user_code_runner.js:63:28)\n    at listOnTimeout (internal/timers.js:554:17)\n    at processTimers (internal/timers.js:497:7)"
             }
           },
@@ -363,7 +363,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 71000000
+              "duration": 58000000
             }
           }
         ],
