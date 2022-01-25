@@ -1,14 +1,14 @@
 <testsuites>
-    <testsuite name="google&apos;s-search-functionality;can-find-search-results" tests="5" failures="0" errors="0" skipped="0" timestamp="Tue, 25 Jan 2022 05:52:29 GMT" time="4.197">
-        <testcase name="Beforeundefined" classname="google&apos;s-search-functionality;can-find-search-results" time="0.495">
+    <testsuite name="google&apos;s-search-functionality;can-find-search-results" tests="5" failures="0" errors="0" skipped="0" timestamp="Tue, 25 Jan 2022 06:18:40 GMT" time="3.5060000000000002">
+        <testcase name="Beforeundefined" classname="google&apos;s-search-functionality;can-find-search-results" time="0.8">
         </testcase>
-        <testcase name="When I type query as BrowserStack" classname="google&apos;s-search-functionality;can-find-search-results" time="2.304">
+        <testcase name="When I type query as BrowserStack" classname="google&apos;s-search-functionality;can-find-search-results" time="2.349">
         </testcase>
-        <testcase name="Then I submit" classname="google&apos;s-search-functionality;can-find-search-results" time="0.414">
+        <testcase name="Then I submit" classname="google&apos;s-search-functionality;can-find-search-results" time="0.24">
         </testcase>
-        <testcase name="Then I should see title BrowserStack" classname="google&apos;s-search-functionality;can-find-search-results" time="0.959">
+        <testcase name="Then I should see title BrowserStack" classname="google&apos;s-search-functionality;can-find-search-results" time="0.108">
         </testcase>
-        <testcase name="Afterundefined" classname="google&apos;s-search-functionality;can-find-search-results" time="0.025">
+        <testcase name="Afterundefined" classname="google&apos;s-search-functionality;can-find-search-results" time="0.009">
         </testcase>
     </testsuite>
 </testsuites>

@@ -2,15 +2,10 @@ const { BeforeAll, Before, AfterAll, After } = require('cucumber')
 const { chromium } = require('playwright');
 const fs = require('fs')
 var path = require('path');
-//let moonHost = process.env.moonHostIp;
-//let moonHost = '52.186.103.162';
-let moonHost = '';
 
 //BSTACK
-let bStack = true;
-let parallel = false;
+let bStack = process.argv.BSTACK;
 const options = {
-    // executablePath: '',
     headless: false,
     slowMo: 100
 };
@@ -24,22 +19,11 @@ const caps = {
     'os_version': 'catalina',
     'name': 'My first playwright test',
     'build': 'Bunnings_POC',
-    'browserstack.username': process.env.BROWSERSTACK_USERNAME || 'mohammedk1',
-    'browserstack.accessKey': process.env.BROWSERSTACK_ACCESS_KEY || 'spBCpUJaVTnvxxssFtEJ',
+    'browserstack.username': 'mohammedk1',
+    'browserstack.accessKey': 'spBCpUJaVTnvxxssFtEJ',
     'client.playwrightVersion': clientPlaywrightVersion  // Playwright version being used on your local project needs to be passed in this capability for BrowserStack to be able to map request and responses correctly
 };
 
-
-const main = async (cap) => {
-    cap['client.playwrightVersion'] = clientPlaywrightVersion;  // Playwright version being used on your local project needs to be passed in this capability for BrowserStack to be able to map request and responses correctly
-    cap['browserstack.username'] = process.env.BROWSERSTACK_USERNAME || 'mohammedk1';
-    cap['browserstack.accessKey'] = process.env.BROWSERSTACK_ACCESS_KEY || 'spBCpUJaVTnvxxssFtEJ';
-
-    console.log("Starting test -->", cap['name']);
-    const browser = await chromium.connect({
-        wsEndpoint: `wss://cdp.browserstack.com/playwright?caps=${encodeURIComponent(JSON.stringify(cap))}`,
-    })
-};
 
 // Create a global browser for the test session.
 BeforeAll(async () => {
@@ -49,7 +33,6 @@ BeforeAll(async () => {
         });
     }
     else {
-        console.log(moonHost)
         global.browser = await chromium.launch(options);
     }
 });
