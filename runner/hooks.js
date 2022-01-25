@@ -1,13 +1,13 @@
 const { BeforeAll, Before, AfterAll, After } = require('cucumber')
 const { chromium } = require('playwright');
-const process = require('process');
+//const process = require('process');
 const fs = require('fs')
 var path = require('path');
-
+require('dotenv').config();
 
 //BSTACK
-let bStack = process.argv.BSTACK;
-console.log("BSTACK IS " + process.argv.BSTACK);
+let bStack = process.env.BSTACK
+console.log("BSTACK IS " + bStack);
 const options = {
     headless: false,
     slowMo: 75
@@ -22,21 +22,22 @@ const caps = {
     'os_version': 'catalina',
     'name': 'My first playwright test',
     'build': 'playwright-build-1',
-    'browserstack.username': 'YOUR_USERNAME',
-    'browserstack.accessKey': 'YOUR_ACCESSKEY',
+    'browserstack.username': process.env.BROWSERSTACK_USERNAME,
+    'browserstack.accessKey': process.env.BROWSERSTACK_ACCESS_KEY,
     'client.playwrightVersion': clientPlaywrightVersion  // Playwright version being used on your local project needs to be passed in this capability for BrowserStack to be able to map request and responses correctly
 };
 
 
 // Create a global browser for the test session.
 BeforeAll(async () => {
-    if (true) {
+    if (bStack == "true") {
+        console.log("RUNNING TEST ON BROWSERSTACK");
         global.browser = await chromium.connect({
             wsEndpoint: `wss://cdp.browserstack.com/playwright?caps=${encodeURIComponent(JSON.stringify(caps))}`,
         });
     }
     else {
-
+        console.log("RUNNING THE TEST LOCALLY");
         global.browser = await chromium.launch(options);
     }
 });

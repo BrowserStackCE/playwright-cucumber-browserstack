@@ -30,6 +30,7 @@
   "version": "1.0.0",
   "dependencies": {
     "cucumber": "^7.0.0-rc.0",
-    "cucumber-html-reporter": "^5.3.0"
+    "cucumber-html-reporter": "^5.3.0",
+    "dotenv": "^14.3.0"
   }
 }
