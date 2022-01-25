@@ -7,7 +7,7 @@ var path = require('path');
 let moonHost = '';
 
 //BSTACK
-let bStack = false;
+let bStack = true;
 let parallel = false;
 const options = {
     // executablePath: '',
@@ -23,12 +23,23 @@ const caps = {
     'os': 'osx',
     'os_version': 'catalina',
     'name': 'My first playwright test',
-    'build': 'playwright-build-1',
+    'build': 'Bunnings_POC',
     'browserstack.username': process.env.BROWSERSTACK_USERNAME || 'mohammedk1',
     'browserstack.accessKey': process.env.BROWSERSTACK_ACCESS_KEY || 'spBCpUJaVTnvxxssFtEJ',
     'client.playwrightVersion': clientPlaywrightVersion  // Playwright version being used on your local project needs to be passed in this capability for BrowserStack to be able to map request and responses correctly
 };
 
+
+const main = async (cap) => {
+    cap['client.playwrightVersion'] = clientPlaywrightVersion;  // Playwright version being used on your local project needs to be passed in this capability for BrowserStack to be able to map request and responses correctly
+    cap['browserstack.username'] = process.env.BROWSERSTACK_USERNAME || 'mohammedk1';
+    cap['browserstack.accessKey'] = process.env.BROWSERSTACK_ACCESS_KEY || 'spBCpUJaVTnvxxssFtEJ';
+
+    console.log("Starting test -->", cap['name']);
+    const browser = await chromium.connect({
+        wsEndpoint: `wss://cdp.browserstack.com/playwright?caps=${encodeURIComponent(JSON.stringify(cap))}`,
+    })
+};
 
 // Create a global browser for the test session.
 BeforeAll(async () => {
@@ -57,5 +68,5 @@ Before(async (scenario) => {
 
 After(async () => {
     await global.page.close();
-    //global.context.close();
+    // global.context.close();
 });
