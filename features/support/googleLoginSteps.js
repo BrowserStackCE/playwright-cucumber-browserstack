@@ -1,5 +1,7 @@
 const { Given, When, Then } = require('cucumber')
 const expect = require('chai').expect
+var { setDefaultTimeout } = require('cucumber');
+setDefaultTimeout(60 * 1000);
 
 
 Given('I type query as BrowserStack', async () => {

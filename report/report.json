@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 918000000
+              "duration": 489000000
             }
           },
           {
@@ -23,11 +23,11 @@
             "line": 4,
             "name": "I type query as BrowserStack",
             "match": {
-              "location": "features/support/googleLoginSteps.js:5"
+              "location": "features/support/googleLoginSteps.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 2427000000
+              "duration": 1218000000
             }
           },
           {
@@ -36,11 +36,11 @@
             "line": 5,
             "name": "I submit",
             "match": {
-              "location": "features/support/googleLoginSteps.js:13"
+              "location": "features/support/googleLoginSteps.js:15"
             },
             "result": {
               "status": "passed",
-              "duration": 237000000
+              "duration": 255000000
             }
           },
           {
@@ -49,11 +49,11 @@
             "line": 6,
             "name": "I should see title BrowserStack",
             "match": {
-              "location": "features/support/googleLoginSteps.js:18"
+              "location": "features/support/googleLoginSteps.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 113000000
+              "duration": 749000000
             }
           },
           {
@@ -61,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 10000000
+              "duration": 53000000
             }
           }
         ],
