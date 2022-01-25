@@ -68,7 +68,7 @@ typings/
 #images
 *.png
 
-.report/*.html
-.report/*.log
-.report/*.json
-.report/*.xml
+report/*.html
+report/*.log
+report/*.json
+report/*.xml
