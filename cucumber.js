@@ -6,6 +6,6 @@ const common = `
   `;
 
 module.exports = {
-  // default: `${common} features/**/*.feature`
-  default: `${common} features/google.feature`
+  default: `${common} features/**/*.feature`
+  // default: `${common} features/google.feature`
 };
