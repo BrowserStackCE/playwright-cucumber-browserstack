@@ -34,9 +34,9 @@ Then('I should see the error', async () => {
     try {
         const text = await page.innerText('._9ay7');
         expect(text).to.equal('The email or mobile number you entered isn’t connected to an account. Find your account and log in.');
-        await page.evaluate(_ => { }, `browserstack_executor: ${JSON.stringify({ action: 'setSessionStatus', arguments: { status: 'passed', reason: 'Title matched' } })}`);
+        await page.evaluate(_ => { }, `browserstack_executor: ${JSON.stringify({ action: 'setSessionStatus', arguments: { status: 'passed', reason: 'Error text visible' } })}`);
     } catch {
-        await page.evaluate(_ => { }, `browserstack_executor: ${JSON.stringify({ action: 'setSessionStatus', arguments: { status: 'failed', reason: 'Title did not match' } })}`);
+        await page.evaluate(_ => { }, `browserstack_executor: ${JSON.stringify({ action: 'setSessionStatus', arguments: { status: 'failed', reason: 'Error text not visible' } })}`);
 
     }
 })
