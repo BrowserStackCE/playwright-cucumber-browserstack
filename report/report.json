@@ -4,56 +4,43 @@
     "elements": [
       {
         "description": "",
-        "id": "google's-search-functionality;can-find-search-results",
+        "id": "facebook-login-validation;should-throw-error-on-incorrect-credentials",
         "keyword": "Scenario",
         "line": 3,
-        "name": "Can find search results",
+        "name": "Should throw error on incorrect credentials",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 636000000
+              "duration": 1146000000
             }
           },
           {
             "arguments": [],
-            "keyword": "When ",
+            "keyword": "Given ",
             "line": 4,
-            "name": "I type query as BrowserStack",
-            "match": {
-              "location": "features/support/googleLoginSteps.js:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1365000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 5,
-            "name": "I submit",
+            "name": "I am on facebook login page",
             "match": {
               "location": "features/support/googleLoginSteps.js:15"
             },
             "result": {
               "status": "passed",
-              "duration": 253000000
+              "duration": 1039000000
             }
           },
           {
             "arguments": [],
-            "keyword": "Then ",
-            "line": 6,
-            "name": "I should see title BrowserStack",
+            "keyword": "When ",
+            "line": 5,
+            "name": "I enter wrong credentials and login",
             "match": {
-              "location": "features/support/googleLoginSteps.js:20"
+              "location": "features/support/googleLoginSteps.js:21"
             },
             "result": {
               "status": "passed",
-              "duration": 992000000
+              "duration": 227000000
             }
           },
           {
@@ -61,7 +48,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 29000000
+              "duration": 20000000
             }
           }
         ],
@@ -69,12 +56,12 @@
         "type": "scenario"
       }
     ],
-    "id": "google's-search-functionality",
+    "id": "facebook-login-validation",
     "line": 1,
     "keyword": "Feature",
-    "name": "Google's Search Functionality",
+    "name": "Facebook login validation",
     "tags": [],
-    "uri": "features/google_2.feature"
+    "uri": "features/facebook.feature"
   },
   {
     "description": "",
@@ -91,7 +78,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 786000000
+              "duration": 1173000000
             }
           },
           {
@@ -104,7 +91,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1289000000
+              "duration": 2297000000
             }
           },
           {
@@ -113,11 +100,11 @@
             "line": 5,
             "name": "I submit",
             "match": {
-              "location": "features/support/googleLoginSteps.js:15"
+              "location": "features/support/googleLoginSteps.js:29"
             },
             "result": {
               "status": "passed",
-              "duration": 257000000
+              "duration": 189000000
             }
           },
           {
@@ -126,11 +113,11 @@
             "line": 6,
             "name": "I should see title BrowserStack",
             "match": {
-              "location": "features/support/googleLoginSteps.js:20"
+              "location": "features/support/googleLoginSteps.js:34"
             },
             "result": {
               "status": "passed",
-              "duration": 960000000
+              "duration": 91000000
             }
           },
           {
@@ -138,7 +125,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 33000000
+              "duration": 14000000
             }
           }
         ],
