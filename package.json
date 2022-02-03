@@ -1,5 +1,5 @@
 {
-  "author": "Ashish Ghosh",
+  "author": "Mohammed Kamle",
   "description": "Playwright end-to-end test automation with Cucumber",
   "devDependencies": {
     "chai": "^4.2.0",

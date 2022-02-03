@@ -1,0 +1,14 @@
+{
+    "user": "mohammedk1",
+    "accessKey": "spBCpUJaVTnvxxssFtEJ",
+    "run_on_BS_cloud": false,
+    "device_caps": [
+        {
+            "browse": "chrome",
+            "os": "osx",
+            "os_version": "catalina",
+            "name": "My first playwright test",
+            "buil": "playwright-build-1"
+        }
+    ]
+}
