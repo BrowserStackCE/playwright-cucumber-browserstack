@@ -1,6 +1,6 @@
 {
-    "user": "mohammedk1",
-    "accessKey": "spBCpUJaVTnvxxssFtEJ",
+    "user": "YOUR_USERNAME",
+    "accessKey": "YOUR_ACCESSKEY",
     "run_on_BS_cloud": false,
     "device_caps": [
         {
