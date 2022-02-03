@@ -1,26 +1,26 @@
 <testsuites>
-    <testsuite name="facebook-login-validation;should-throw-error-on-incorrect-credentials" tests="5" failures="0" errors="0" skipped="0" timestamp="Thu, 03 Feb 2022 07:18:49 GMT" time="6.178">
-        <testcase name="Beforeundefined" classname="facebook-login-validation;should-throw-error-on-incorrect-credentials" time="0.619">
+    <testsuite name="facebook-login-validation;should-throw-error-on-incorrect-credentials" tests="5" failures="0" errors="0" skipped="0" timestamp="Thu, 03 Feb 2022 07:23:30 GMT" time="4.018999999999999">
+        <testcase name="Beforeundefined" classname="facebook-login-validation;should-throw-error-on-incorrect-credentials" time="0.961">
         </testcase>
-        <testcase name="Given I am on facebook login page" classname="facebook-login-validation;should-throw-error-on-incorrect-credentials" time="3.199">
+        <testcase name="Given I am on facebook login page" classname="facebook-login-validation;should-throw-error-on-incorrect-credentials" time="1.1">
         </testcase>
-        <testcase name="When I enter wrong credentials and login" classname="facebook-login-validation;should-throw-error-on-incorrect-credentials" time="0.255">
+        <testcase name="When I enter wrong credentials and login" classname="facebook-login-validation;should-throw-error-on-incorrect-credentials" time="1.638">
         </testcase>
-        <testcase name="Then I should see the error" classname="facebook-login-validation;should-throw-error-on-incorrect-credentials" time="2.067">
+        <testcase name="Then I should see the error" classname="facebook-login-validation;should-throw-error-on-incorrect-credentials" time="0.292">
         </testcase>
-        <testcase name="Afterundefined" classname="facebook-login-validation;should-throw-error-on-incorrect-credentials" time="0.038">
+        <testcase name="Afterundefined" classname="facebook-login-validation;should-throw-error-on-incorrect-credentials" time="0.028">
         </testcase>
     </testsuite>
-    <testsuite name="google&apos;s-search-functionality;can-find-search-results" tests="5" failures="0" errors="0" skipped="0" timestamp="Thu, 03 Feb 2022 07:18:49 GMT" time="3.195">
-        <testcase name="Beforeundefined" classname="google&apos;s-search-functionality;can-find-search-results" time="0.684">
+    <testsuite name="google&apos;s-search-functionality;can-find-search-results" tests="5" failures="0" errors="0" skipped="0" timestamp="Thu, 03 Feb 2022 07:23:30 GMT" time="4.667">
+        <testcase name="Beforeundefined" classname="google&apos;s-search-functionality;can-find-search-results" time="0.671">
         </testcase>
-        <testcase name="When I type query as BrowserStack" classname="google&apos;s-search-functionality;can-find-search-results" time="1.457">
+        <testcase name="When I type query as BrowserStack" classname="google&apos;s-search-functionality;can-find-search-results" time="3.672">
         </testcase>
-        <testcase name="Then I submit" classname="google&apos;s-search-functionality;can-find-search-results" time="0.292">
+        <testcase name="Then I submit" classname="google&apos;s-search-functionality;can-find-search-results" time="0.222">
         </testcase>
-        <testcase name="Then I should see title BrowserStack" classname="google&apos;s-search-functionality;can-find-search-results" time="0.7">
+        <testcase name="Then I should see title BrowserStack" classname="google&apos;s-search-functionality;can-find-search-results" time="0.092">
         </testcase>
-        <testcase name="Afterundefined" classname="google&apos;s-search-functionality;can-find-search-results" time="0.062">
+        <testcase name="Afterundefined" classname="google&apos;s-search-functionality;can-find-search-results" time="0.01">
         </testcase>
     </testsuite>
 </testsuites>

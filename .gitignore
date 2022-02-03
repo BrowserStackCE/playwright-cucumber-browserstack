@@ -5,6 +5,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 report/
+report/cucumber-html-report.html
+report/junitreport.xml
+report/report.json
 
 # Runtime data
 pids
