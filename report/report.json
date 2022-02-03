@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1146000000
+              "duration": 619000000
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1039000000
+              "duration": 3199000000
             }
           },
           {
@@ -40,7 +40,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 227000000
+              "duration": 255000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should see the error",
+            "match": {
+              "location": "features/support/googleLoginSteps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2067000000
             }
           },
           {
@@ -48,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 20000000
+              "duration": 38000000
             }
           }
         ],
@@ -78,7 +91,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1173000000
+              "duration": 684000000
             }
           },
           {
@@ -91,7 +104,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2297000000
+              "duration": 1457000000
             }
           },
           {
@@ -100,11 +113,11 @@
             "line": 5,
             "name": "I submit",
             "match": {
-              "location": "features/support/googleLoginSteps.js:29"
+              "location": "features/support/googleLoginSteps.js:28"
             },
             "result": {
               "status": "passed",
-              "duration": 189000000
+              "duration": 292000000
             }
           },
           {
@@ -113,11 +126,11 @@
             "line": 6,
             "name": "I should see title BrowserStack",
             "match": {
-              "location": "features/support/googleLoginSteps.js:34"
+              "location": "features/support/googleLoginSteps.js:44"
             },
             "result": {
               "status": "passed",
-              "duration": 91000000
+              "duration": 700000000
             }
           },
           {
@@ -125,7 +138,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 14000000
+              "duration": 62000000
             }
           }
         ],
