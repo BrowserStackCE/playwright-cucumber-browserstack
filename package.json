@@ -6,7 +6,7 @@
     "cucumber": "^7.0.0-rc.0",
     "cucumber-junit": "^1.7.1",
     "cucumberjs-junitxml": "^1.0.0",
-    "playwright": "1.18.0"
+    "playwright": "1.36.1"
   },
   "keywords": [
     "cucumber",
@@ -25,11 +25,13 @@
     "url": ""
   },
   "scripts": {
-    "test": "cucumber-js --parallel 1 -f json:report/report.json && node report.js && cat report/report.json | npx cucumber-junit > report/junitreport.xml"
+    "test:chrome-osx": "DEVICE=chrome-osx npx cucumber-js -p browserstack -f json:report/report.json",
+    "test:samsung":"DEVICE=samsung npx cucumber-js -p browserstack -f json:report/report.json",
+    "posttest": "node report.js && cat report/report.json | npx cucumber-junit > report/junitreport.xml"
   },
   "version": "1.0.0",
   "dependencies": {
-    "cucumber": "^7.0.0-rc.0",
+    "@cucumber/cucumber": "^9.3.0",
     "cucumber-html-reporter": "^5.3.0",
     "dotenv": "^14.3.0"
   }

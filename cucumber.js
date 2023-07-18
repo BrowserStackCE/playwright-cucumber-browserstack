@@ -1,11 +1,8 @@
-
-const common = `
-  --require runner/assertions.js
-  --require runner/hooks.js 
-  --require features/support/googleLoginSteps.js
-  `;
-
+const options = [
+  '--require runner/hooks.js ',
+  '--require features/support/*.js'
+].join(' ')
 module.exports = {
   // default: `${common} features/**/*.feature`
-  default: `${common} features/google.feature`
+  browserstack: `${options} features/**/*.feature`
 };

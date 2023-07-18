@@ -4,7 +4,7 @@
     "elements": [
       {
         "description": "",
-        "id": "google's-search-functionality;can-find-search-results",
+        "id": "search-functionality;can-find-search-results",
         "keyword": "Scenario",
         "line": 3,
         "name": "Can find search results",
@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1096000000
+              "duration": 989081243
             }
           },
           {
@@ -23,11 +23,11 @@
             "line": 4,
             "name": "I type query as BrowserStack",
             "match": {
-              "location": "features/support/googleLoginSteps.js:7"
+              "location": "features/support/searchStep.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 2267000000
+              "duration": 1595783602
             }
           },
           {
@@ -36,11 +36,11 @@
             "line": 5,
             "name": "I submit",
             "match": {
-              "location": "features/support/googleLoginSteps.js:15"
+              "location": "features/support/searchStep.js:15"
             },
             "result": {
               "status": "passed",
-              "duration": 480000000
+              "duration": 440953044
             }
           },
           {
@@ -49,11 +49,11 @@
             "line": 6,
             "name": "I should see title BrowserStack",
             "match": {
-              "location": "features/support/googleLoginSteps.js:20"
+              "location": "features/support/searchStep.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 87000000
+              "duration": 571496289
             }
           },
           {
@@ -61,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 18000000
+              "duration": 143971146
             }
           }
         ],
@@ -69,11 +69,11 @@
         "type": "scenario"
       }
     ],
-    "id": "google's-search-functionality",
+    "id": "search-functionality",
     "line": 1,
     "keyword": "Feature",
-    "name": "Google's Search Functionality",
+    "name": "Search Functionality",
     "tags": [],
-    "uri": "features/google.feature"
+    "uri": "features/search.feature"
   }
 ]
