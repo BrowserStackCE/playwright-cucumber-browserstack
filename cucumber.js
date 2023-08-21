@@ -1,11 +1,10 @@
-
 const common = `
-  --require runner/assertions.js
-  --require runner/hooks.js 
-  --require features/support/googleLoginSteps.js
-  `;
-
+    --require setup/assertions.js
+    --require setup/hooks.js
+    --require step-definitions/**/*.step.js
+    --require step-definitions/**/*.js
+    --require cucumber.js
+`
 module.exports = {
-  // default: `${common} features/**/*.feature`
-  default: `${common} features/google.feature`
-};
+  default: `${common} features/**/*.feature`,
+}
