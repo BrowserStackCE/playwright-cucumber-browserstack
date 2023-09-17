@@ -14,6 +14,11 @@ let bsLocal = new BrowserStackLocal.Local()
 
 process.argv[0] = "npx"
 process.argv[1] = "cucumber-js"
+process.argv[2] = "-p"
+process.argv[3] =
+  process.env.BROWSERSTACK_LOCAL == "true"
+    ? "browserstackLocal"
+    : "browserstack"
 
 async function exec() {
   //Start BrowserStack Local if BROWSERSTACK_LOCAL is set to true
@@ -26,7 +31,7 @@ async function exec() {
 
   for (let i in config) {
     let env = Object.create(process.env)
-    env.TASK_ID = i.toString(); //setting a task id indicating the configuration for test execution
+    env.TASK_ID = i.toString() //setting a task id indicating the configuration for test execution
     let p = child_process.spawn("/usr/bin/env", process.argv, { env: env }) // executing the test command
 
     increaseTestCount()

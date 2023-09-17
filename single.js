@@ -13,6 +13,11 @@ let bsLocal = new BrowserStackLocal.Local()
 
 process.argv[0] = "npx"
 process.argv[1] = "cucumber-js"
+process.argv[2] = "-p"
+process.argv[3] =
+  process.env.BROWSERSTACK_LOCAL == "true"
+    ? "browserstackLocal"
+    : "browserstack"
 
 async function exec() {
   if (process.env.BROWSERSTACK_LOCAL == "true") {

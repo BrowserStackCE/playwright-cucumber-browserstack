@@ -6,5 +6,7 @@ const common = `
     --require cucumber.js
 `
 module.exports = {
-  default: `${common} features/**/*.feature`,
+  default: `${common} features/**/sample.feature`,
+  browserstack: `${common} features/**/sample.feature`,
+  browserstackLocal: `${common} features/**/local.feature`,
 }

@@ -1,8 +1,9 @@
-Feature: Wikipedia Search
+Feature: BstackDemo
 
     As a user
-    I want to login to the application
+    I want to preform search workflow on BstackDemo
 
-    Scenario: Performing wikipedia search
-        Given I open wikipedia homepage
-        When Enter text and search
+    Scenario: Performing workflows on BstackDemo
+        Given I open bstackdemo homepage
+        When I add to cart and checkout
+        Then I Attempt to login

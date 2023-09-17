@@ -1,5 +1,5 @@
 const playwright = require("playwright")
-const { chromium } = require("playwright")
+const { chromium, _android } = require("playwright")
 const {
   Before,
   After,
@@ -18,26 +18,42 @@ caps["browserstack.accessKey"] = process.env.BROWSERSTACK_ACCESS_KEY || "key"
 caps["browserstack.local"] = process.env.BROWSERSTACK_LOCAL || "false"
 
 BeforeAll(async () => {
-  global.browser = await chromium.connect({
-    wsEndpoint: `wss://cdp.browserstack.com/playwright?caps=${encodeURIComponent(
-      JSON.stringify(caps)
-    )}`,
-  })
+  if (caps.realMobile) {
+    global.device = await _android.connect(
+      `wss://cdp.browserstack.com/playwright?caps=${encodeURIComponent(
+        JSON.stringify(caps)
+      )}`
+    )
+    await global.device.shell("am force-stop com.android.chrome")
+  } else {
+    global.browser = await chromium.connect({
+      wsEndpoint: `wss://cdp.browserstack.com/playwright?caps=${encodeURIComponent(
+        JSON.stringify(caps)
+      )}`,
+    })
+  }
 })
 
 AfterAll(async () => {
-  console.log("Close Browser")
-  await global.browser.close()
+  if (caps.realMobile == "true") {
+    await global.device.close()
+  } else {
+    await global.browser.close()
+  }
 })
 
 Before(async () => {
-  console.log("Create new context page")
-  global.context = await global.browser.newContext()
+  global.context =
+    caps.realMobile == "true"
+      ? await global.device.launchBrowser()
+      : await global.browser.newContext()
   global.page = await global.context.newPage()
 })
 
 After(async () => {
-  console.log("Close context and page")
-  await global.context.close()
-  await global.page.close()
+  if (caps.realMobile == "true") {
+    await global.context.close()
+  } else {
+    await global.page.close()
+  }
 })

@@ -3,10 +3,14 @@ const { SamplePage } = require("../page-objects/sample-page")
 
 const samplePage = new SamplePage()
 
-Given("I open wikipedia homepage", async function () {
+Given("I open bstackdemo homepage", async function () {
   await samplePage.launchPage()
 })
 
-When("Enter text and search", async function () {
-  await samplePage.search()
+When("I add to cart and checkout", async function () {
+  await samplePage.addToCart()
+})
+
+Then("I Attempt to login", async function () {
+  await samplePage.loginAttempt()
 })

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "single": "npx cucumber-js",
+    "single": "node single",
     "local-single": "BROWSERSTACK_LOCAL=true node single",
     "parallel": "node parallel",
     "local-parallel": "BROWSERSTACK_LOCAL=true node parallel"

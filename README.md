@@ -30,14 +30,15 @@ export BROWSERSTACK_ACCESS_KEY=your_access_key
 npm run single
 ```
 
-### Run a single test with local testing
-```bash
-npm run local-single
-```
-
 ### Run tests in parallel
 ```bash
 npm run parallel
+```
+
+
+### Run a single test with local testing
+```bash
+npm run local-single
 ```
 
 ### Run tests in parallel with local testing
