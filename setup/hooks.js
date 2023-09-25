@@ -1,59 +1,73 @@
-const playwright = require("playwright")
-const { chromium, _android } = require("playwright")
+const { chromium, _android } = require("playwright");
 const {
-  Before,
-  After,
-  BeforeAll,
-  AfterAll,
-  setDefaultTimeout,
-} = require("@cucumber/cucumber")
-const config = require("../browserstack.config.js")
+    Before,
+    After,
+    BeforeAll,
+    AfterAll,
+    setDefaultTimeout,
+} = require("@cucumber/cucumber");
+const config = require("../browserstack.config.js");
 
-setDefaultTimeout(60 * 1000)
+setDefaultTimeout(60 * 1000);
 
 //Getting browser configuration from browserstack.config.js based on the TASK_ID provided (default index being 0)
-let caps = config[process.env.TASK_ID || 0]
-caps["browserstack.username"] = process.env.BROWSERSTACK_USERNAME || "user"
-caps["browserstack.accessKey"] = process.env.BROWSERSTACK_ACCESS_KEY || "key"
-caps["browserstack.local"] = process.env.BROWSERSTACK_LOCAL || "false"
+let caps = config[process.env.TASK_ID || 0];
+caps["browserstack.username"] = process.env.BROWSERSTACK_USERNAME || "user";
+caps["browserstack.accessKey"] = process.env.BROWSERSTACK_ACCESS_KEY || "key";
+caps["browserstack.local"] = process.env.BROWSERSTACK_LOCAL || "false";
 
 BeforeAll(async () => {
-  if (caps.realMobile) {
-    global.device = await _android.connect(
-      `wss://cdp.browserstack.com/playwright?caps=${encodeURIComponent(
-        JSON.stringify(caps)
-      )}`
-    )
-    await global.device.shell("am force-stop com.android.chrome")
-  } else {
-    global.browser = await chromium.connect({
-      wsEndpoint: `wss://cdp.browserstack.com/playwright?caps=${encodeURIComponent(
-        JSON.stringify(caps)
-      )}`,
-    })
-  }
-})
+    if (caps.realMobile) {
+        global.device = await _android.connect(
+            `wss://cdp.browserstack.com/playwright?caps=${encodeURIComponent(
+                JSON.stringify(caps)
+            )}`
+        );
+        await global.device.shell("am force-stop com.android.chrome");
+    } else {
+        global.browser = await chromium.connect({
+            wsEndpoint: `wss://cdp.browserstack.com/playwright?caps=${encodeURIComponent(
+                JSON.stringify(caps)
+            )}`,
+        });
+    }
+});
 
 AfterAll(async () => {
-  if (caps.realMobile == "true") {
-    await global.device.close()
-  } else {
-    await global.browser.close()
-  }
-})
+    if (caps.realMobile == "true") {
+        await global.device.close();
+    } else {
+        await global.browser.close();
+    }
+});
 
 Before(async () => {
-  global.context =
-    caps.realMobile == "true"
-      ? await global.device.launchBrowser()
-      : await global.browser.newContext()
-  global.page = await global.context.newPage()
-})
+    global.context =
+        caps.realMobile == "true"
+            ? await global.device.launchBrowser()
+            : await global.browser.newContext();
+    global.page = await global.context.newPage();
+
+    if (caps.realMobile == "true") {
+        const pages = await global.context.pages();
+        await pages[0].evaluate((_) => {},
+        `browserstack_executor: ${JSON.stringify({ action: "setSessionName", arguments: { name: "Playwright-Cucumber Android Test" } })}`);
+    } else {
+        await global.page.evaluate((_) => {},
+        `browserstack_executor: ${JSON.stringify({ action: "setSessionName", arguments: { name: "Playwright-Cucumber Desktop Browser Test" } })}`);
+    }
+});
 
 After(async () => {
-  if (caps.realMobile == "true") {
-    await global.context.close()
-  } else {
-    await global.page.close()
-  }
-})
+    if (caps.realMobile == "true") {
+        const pages = await global.context.pages();
+        await pages[0].evaluate((_) => {},
+        `browserstack_executor: ${JSON.stringify({ action: "setSessionStatus", arguments: { status: "passed", reason: "Test completed" } })}`);
+
+        await global.context.close();
+    } else {
+        await global.page.evaluate((_) => {},
+        `browserstack_executor: ${JSON.stringify({ action: "setSessionStatus", arguments: { status: "passed", reason: "Test completed" } })}`);
+        await global.page.close();
+    }
+});

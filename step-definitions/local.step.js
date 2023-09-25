@@ -1,4 +1,4 @@
-const { Given, When, Then } = require("@cucumber/cucumber")
+const { Given } = require("@cucumber/cucumber")
 const { LocalPage } = require("../page-objects/local-page")
 
 const localPage = new LocalPage()

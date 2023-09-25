@@ -5,7 +5,8 @@ This repository demonstrates how to set up end-to-end testing for web applicatio
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) installed on your system.
-- BrowserStack account (username and access key).
+- Note: Cucumber can only run on Node.js versions 14 || 16 || >=18
+- BrowserStack account (username and access key). 
 
 ## Installation
 
@@ -18,8 +19,8 @@ npm install
 Set or export your BrowserStack credentials:
 
 ```bash
-export BROWSERSTACK_USERNAME=your_username
-export BROWSERSTACK_ACCESS_KEY=your_access_key
+export BROWSERSTACK_USERNAME=USERNAME
+export BROWSERSTACK_ACCESS_KEY=ACCESS_KEY
 ```
 
 ## Usage
