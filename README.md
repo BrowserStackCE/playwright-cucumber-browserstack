@@ -1,17 +1,58 @@
-# playwright-cucumber-browserstack
+# Playwright Cucumber Setup with BrowserStack
 
-This repository demonstrates how you can run a playwright-cucumber based tests on BrowserStack cloud.
+This repository demonstrates how to set up end-to-end testing for web applications using Playwright and Cucumber, with BrowserStack for cross-browser and cross-device testing.
 
-1. Configuring the test
+## Prerequisites
 
-    - Clone the repo 
-    ``` 
-    npm install
-    ```
-    - Add your BrowserStack username and access key to the [`config file`](config.json)
-    - In [`config file`](config.json) you can choose if you want to run tests locally or on Browserstack cloud by setting the value of "run_on_BS_cloud" to either         true or false 
-    - Run the test
-     ```
-     npm run test
-     ```
-    
+- [Node.js](https://nodejs.org/) installed on your system.
+- Note: Cucumber can only run on Node.js versions 14 || 16 || >=18
+- BrowserStack account (username and access key). 
+
+## Installation
+
+```bash
+npm install
+```
+
+## Set BrowserStack Credentials
+
+Set or export your BrowserStack credentials:
+
+```bash
+export BROWSERSTACK_USERNAME=USERNAME
+export BROWSERSTACK_ACCESS_KEY=ACCESS_KEY
+```
+
+## Usage
+
+
+### Run a single test
+```bash
+npm run single
+```
+
+### Run tests in parallel
+```bash
+npm run parallel
+```
+
+
+### Run a single test with local testing
+```bash
+npm run local-single
+```
+
+### Run tests in parallel with local testing
+```bash
+npm run local-parallel
+```
+
+# Project Structure
+
+- `features/`: Directory containing Cucumber feature files.
+- `step_definitions/`: Directory containing step definitions for Cucumber.
+- `setup/hooks.js`: File to setup the browser object and initiate connection with BrowserStack.
+- `browserstack.config.js`: List of Browsers for cross-browser testing.
+- `single.js`: Script to run test command for a single test.
+- `parallel.js`: Script to run multiple test commands for running tests in parallel.
+- `globalsetup.js` and `globalteardown.js`: Files to start and stop BrowserStackLocal tunnel respectively
